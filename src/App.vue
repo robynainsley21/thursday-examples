@@ -9,14 +9,14 @@
         <h2>App component</h2>
       </div>
       <div class="row">
-        <Card v-for="(friend, index) in friends" :key="index">
+        <CardComp v-for="(friend, index) in friends" :key="index">
           <template #cardHeader>
-            <img src="friend.profile" alt="friend.firstname" loading="lazy">
+            <img src="friend.profile" alt="friend.firstName" loading="lazy">
           </template>
           <template #cardBody>
             <p>{{ friend.firstName }} {{ friend.lastName }}</p>
           </template>
-        </Card>
+        </CardComp>
       </div>
     </div>
   </div>
@@ -24,7 +24,7 @@
 
 <script>
 import UserDetail from '@/components/UserDetails.vue'
-import Card from '@/components/Card.vue'
+import CardComp from '@/components/Card.vue'
 
 export default {
   name: 'App',
@@ -51,7 +51,7 @@ export default {
   },
   components: {
     UserDetail,
-    Card
+    CardComp
   }
 }
 </script>
